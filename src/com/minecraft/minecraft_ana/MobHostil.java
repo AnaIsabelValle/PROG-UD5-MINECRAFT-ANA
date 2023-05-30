@@ -2,16 +2,26 @@ package com.minecraft.minecraft_ana;
 
 import com.minecraft.interfaces.Combate;
 
-public class MobHostil extends Mob implements Combate {
+public abstract class MobHostil extends Mob implements Combate {
     private int fuerza;
+
+    public MobHostil(int salud, int fuerza) {
+        super(salud);
+        this.fuerza = fuerza;
+    }
 
     @Override
     public int atarcar() {
-        return 0;
+        return fuerza;
     }
 
     @Override
     public void recibirAtaque(int ataque) {
+        int dañoRecibido = ataque;
+        int saludRestante = salud - dañoRecibido;
+        System.out.println("El daño recibido es de : " + dañoRecibido + " y la salud restante es de : "
+                + saludRestante);
+
 
     }
 
