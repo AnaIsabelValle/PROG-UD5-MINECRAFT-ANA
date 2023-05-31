@@ -1,4 +1,4 @@
-package com.minecraft.minecraf_ana.interfaces;
+package com.minecraft.minecraft_ana.interfaces;
 
 public interface Daño {
     public void recibirAtaque(int ataque);

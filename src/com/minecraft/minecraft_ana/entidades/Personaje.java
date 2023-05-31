@@ -1,16 +1,29 @@
-package com.minecraft.minecraf_ana.entidades;
+package com.minecraft.minecraft_ana.entidades;
 
-import com.minecraft.minecraf_ana.interfaces.Combate;
+import com.minecraft.minecraft_ana.interfaces.Combate;
 
 public class Personaje implements Combate {
     private int salud;
     private int defensa;
     private int fuerza;
 
+    public int getSalud() {
+        return salud;
+    }
+
+    public int getDefensa() {
+        return defensa;
+    }
+
+    public int getFuerza() {
+        return fuerza;
+    }
+
     public Personaje(int defensa, int fuerza) {
         this.salud = 12;
         this.defensa = defensa;
         this.fuerza = fuerza;
+
     }
 
     @Override

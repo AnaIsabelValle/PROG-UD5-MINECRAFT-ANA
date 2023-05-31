@@ -1,4 +1,4 @@
-package com.minecraft.minecraf_ana.entidades;
+package com.minecraft.minecraft_ana.entidades;
 
 public class Oveja extends MobPacifico {
     public Oveja() {
@@ -8,5 +8,10 @@ public class Oveja extends MobPacifico {
     @Override
     public void moverse() {
         System.out.println("La oveja, se mueve por el campo");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

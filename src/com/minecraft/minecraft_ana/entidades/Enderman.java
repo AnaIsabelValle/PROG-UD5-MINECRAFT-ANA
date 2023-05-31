@@ -1,4 +1,4 @@
-package com.minecraft.minecraf_ana.entidades;
+package com.minecraft.minecraft_ana.entidades;
 
 public class Enderman extends MobHostil {
     public Enderman() {
@@ -8,5 +8,10 @@ public class Enderman extends MobHostil {
     @Override
     public void moverse() {
         System.out.println("El Enderman, se le teletransporta detrás");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

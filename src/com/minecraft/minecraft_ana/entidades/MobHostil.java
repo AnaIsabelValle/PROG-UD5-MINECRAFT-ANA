@@ -1,6 +1,6 @@
-package com.minecraft.minecraf_ana.entidades;
+package com.minecraft.minecraft_ana.entidades;
 
-import com.minecraft.minecraf_ana.interfaces.Combate;
+import com.minecraft.minecraft_ana.interfaces.Combate;
 
 public abstract class MobHostil extends Mob implements Combate {
     private int fuerza;
