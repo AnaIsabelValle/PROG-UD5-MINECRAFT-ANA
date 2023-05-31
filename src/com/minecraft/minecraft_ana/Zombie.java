@@ -1,8 +1,6 @@
 package com.minecraft.minecraft_ana;
 
-import com.minecraft.interfaces.Daño;
-
-public class Zombie extends MobHostil implements Daño {
+public class Zombie extends MobHostil {
     public Zombie() {
         super(10, 4);
     }
