@@ -1,6 +1,6 @@
-package com.minecraft.minecraft_ana;
+package com.minecraft.minecraf_ana.entidades;
 
-import com.minecraft.interfaces.Combate;
+import com.minecraft.minecraf_ana.interfaces.Combate;
 
 public class Personaje implements Combate {
     private int salud;

@@ -1,6 +1,6 @@
-package com.minecraft.minecraft_ana;
+package com.minecraft.minecraf_ana.entidades;
 
-import com.minecraft.interfaces.Daño;
+import com.minecraft.minecraf_ana.interfaces.Daño;
 
 public abstract class MobPacifico extends Mob implements Daño {
     public MobPacifico(int salud) {

@@ -1,4 +1,4 @@
-package com.minecraft.minecraft_ana;
+package com.minecraft.minecraf_ana.entidades;
 
 public class Oveja extends MobPacifico {
     public Oveja() {
