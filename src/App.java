@@ -1,5 +1,3 @@
-package com.minecraft.minecraft_ana.simulacion;
-
 import com.minecraft.minecraft_ana.entidades.Mob;
 import com.minecraft.minecraft_ana.entidades.MobHostil;
 import com.minecraft.minecraft_ana.entidades.Personaje;
@@ -21,55 +19,60 @@ public class App {
         System.out.println("Querido usuario, le damos la bienvenida para comenzar a jugar a -->> ");
         System.out.println("*--\"MINECRAFT-ANA\"--*");
         System.out.println("Seleccione un arma: ");
-        System.out.println("1. Ninguna");
-        System.out.println("2. Espada de madera");
-        System.out.println("3. Espada de hierro");
-        System.out.println("4. Espada de diamantes");
-        int arma = teclado.nextInt();
-        int fuerza = 0;
-        switch (arma) {
-            case 1:
-                fuerza = 1;
-                break;
-            case 2:
-                fuerza = 2;
-                break;
-            case 3:
-                fuerza = 3;
-                break;
-            case 4:
-                fuerza = 5;
-                break;
-            default:
-                System.out.println("Opción incorrecta");
+        int opcion = 5;
+        while (opcion != 4) {
+            System.out.println("1. Ninguna");
+            System.out.println("2. Espada de madera");
+            System.out.println("3. Espada de hierro");
+            System.out.println("4. Espada de diamantes");
+            opcion = teclado.nextInt();
+            int fuerza = 0;
+            switch (opcion) {
+                case 1:
+                    fuerza = 1;
+                    break;
+                case 2:
+                    fuerza = 2;
+                    break;
+                case 3:
+                    fuerza = 3;
+                    break;
+                case 4:
+                    fuerza = 5;
+                    break;
+                default:
+                    System.out.println("Opción incorrecta");
+            }
         }
 
         System.out.println("Seleccione una armadura");
-        System.out.println("1. Ninguna");
-        System.out.println("2. De cuero");
-        System.out.println("3. De hierro");
-        System.out.println("4. De diamente");
-        int armadura = teclado.nextInt();
-        int defensa = 0;
-        switch (armadura) {
-            case 1:
-                defensa = 0;
-                break;
-            case 2:
-                defensa = 1;
-                break;
-            case 3:
-                defensa = 2;
-                break;
-            case 4:
-                defensa = 3;
-                break;
-            default:
-                System.out.println("Opción incorrecta");
-                break;
+        while (opcion != 4) {
+            System.out.println("1. Ninguna");
+            System.out.println("2. De cuero");
+            System.out.println("3. De hierro");
+            System.out.println("4. De diamente");
+            opcion = teclado.nextInt();
+            int defensa = 0;
+            switch (opcion) {
+                case 1:
+                    defensa = 0;
+                    break;
+                case 2:
+                    defensa = 1;
+                    break;
+                case 3:
+                    defensa = 2;
+                    break;
+                case 4:
+                    defensa = 3;
+                    break;
+                default:
+                    System.out.println("Opción incorrecta");
+                    break;
+            }
         }
 
-        Personaje personaje = new Personaje(defensa, fuerza);
+        Personaje personaje = new Personaje(teclado.nextInt(), teclado.nextInt());
 
         System.out.println(" ******** BIENVENIDO AL COMBATE ********");
         MobHostil enemigo = new Zombie();
@@ -77,6 +80,7 @@ public class App {
         while (personaje.getSalud() > 0 && enemigo.getSalud() > 0) {
             turno++;
         }
+
         int ataquePersonaje = personaje.atarcar();
         enemigo.recibirAtaque(ataquePersonaje);
         System.out.println("El personaje ataca al enemigo" + ataquePersonaje + " puntos de daño");
@@ -99,7 +103,7 @@ public class App {
         System.out.println("El combate ha finalizado");
         System.out.println("Turnos transcurridos : " + turno);
 
-        if(personaje.getSalud() <= 0) {
+        if (personaje.getSalud() <= 0) {
             System.out.println("El enemigo ha ganado, es el \"victorioso\"");
         } else {
             System.out.println("El personaje ha ganado, es el \"victorioso\"");
